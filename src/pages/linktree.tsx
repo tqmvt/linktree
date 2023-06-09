@@ -4,17 +4,19 @@ import {
   List,
   ListIcon,
   ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+} from "@chakra-ui/react";
+import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
 
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { Footer } from '../components/Footer'
+import { Container } from "../components/Container";
+import { Main } from "../components/Main";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import { Footer } from "../components/Footer";
+import { Avatar } from "../components/atom/Avatar";
 
 const Index = () => (
   <Container height="100vh">
     <Main>
+      <Avatar src="/images/img_avatar.png" />
       <List spacing={3} my={0} color="text">
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
@@ -41,6 +43,6 @@ const Index = () => (
       <Text>Cookie Preferences</Text>
     </Footer>
   </Container>
-)
+);
 
-export default Index
+export default Index;
