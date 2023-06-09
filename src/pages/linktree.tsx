@@ -12,12 +12,38 @@ import { Main } from "../components/Main";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Footer } from "../components/Footer";
 import { Avatar } from "../components/atom/Avatar";
+import { LinkButton } from "../components/atom/LinkButton";
 
+const links: LinkT[] = [
+  {
+    image: "/images/thumbnail.jpg",
+    title: "Twitter",
+    link: "",
+  },
+  {
+    image: "",
+    title: "Github",
+    link: "",
+  },
+  {
+    image: "/images/thumbnail2.jpg",
+    title: "Linkedin",
+    link: "",
+  },
+  {
+    image: "",
+    title: "Stackoverflow",
+    link: "",
+  },
+];
 const Index = () => (
   <Container height="100vh">
     <Main>
       <Avatar src="/images/img_avatar.png" userId="pharrell" />
 
+      {links.map((link) => {
+        return <LinkButton key={link.link} data={link} />;
+      })}
       <List spacing={3} my={0} color="text">
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />
