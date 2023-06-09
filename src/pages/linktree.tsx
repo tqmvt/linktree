@@ -13,6 +13,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Footer } from "../components/Footer";
 import { Avatar } from "../components/atom/Avatar";
 import { LinkButton } from "../components/atom/LinkButton";
+import { Socials } from "../components/atom/Socials";
 
 const links: LinkT[] = [
   {
@@ -36,6 +37,25 @@ const links: LinkT[] = [
     link: "",
   },
 ];
+
+const socialLinks: SocialLinkT[] = [
+  {
+    title: "twitter",
+    url: "https://twitter.com/_scentforest",
+  },
+  {
+    title: "github",
+    url: "https://github.com/gofixgo",
+  },
+  {
+    title: "instagram",
+    url: "https://twitter.com/_scentforest",
+  },
+  {
+    title: "facebook",
+    url: "https://twitter.com/_scentforest",
+  },
+];
 const Index = () => (
   <Container height="100vh">
     <Main>
@@ -44,25 +64,7 @@ const Index = () => (
       {links.map((link) => {
         return <LinkButton key={link.link} data={link} />;
       })}
-      <List spacing={3} my={0} color="text">
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
+      <Socials items={socialLinks} />
     </Main>
 
     <DarkModeSwitch />
