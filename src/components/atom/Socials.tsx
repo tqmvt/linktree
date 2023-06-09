@@ -1,4 +1,4 @@
-import { Box, Flex, chakra } from "@chakra-ui/react";
+import { Flex, chakra, Link as ChakraLink } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -24,23 +24,30 @@ export const Socials = ({ items }: SocialsProps) => {
     <Flex alignItems="center" justifyContent="center">
       {items.map((item) => {
         return (
-          <Flex
+          <ChakraLink
+            isExternal
             key={item.title}
-            mx="2"
-            w="80px"
-            h="50px"
-            alignItems="center"
-            justifyContent="center"
+            href={item.url}
+            _hover={{ textDecoration: "none" }}
           >
-            <CoverImg
-              as={Image}
-              src={socials[item.title]}
-              width={8}
-              height={8}
-              alt={item.title}
-              _hover={{ width: "40px", height: "40px" }}
-            />
-          </Flex>
+            <Flex
+              key={item.title}
+              mx="2"
+              w="80px"
+              h="50px"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <CoverImg
+                as={Image}
+                src={socials[item.title]}
+                width={8}
+                height={8}
+                alt={item.title}
+                _hover={{ width: "36px", height: "36px" }}
+              />
+            </Flex>
+          </ChakraLink>
         );
       })}
     </Flex>

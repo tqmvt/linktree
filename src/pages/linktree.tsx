@@ -1,15 +1,7 @@
-import {
-  Link as ChakraLink,
-  Text,
-  List,
-  ListIcon,
-  ListItem,
-} from "@chakra-ui/react";
-import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
+import { Text } from "@chakra-ui/react";
 
 import { Container } from "../components/Container";
 import { Main } from "../components/Main";
-import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { Footer } from "../components/Footer";
 import { Avatar } from "../components/atom/Avatar";
 import { LinkButton } from "../components/atom/LinkButton";
@@ -57,7 +49,7 @@ const socialLinks: SocialLinkT[] = [
   },
 ];
 const Index = () => (
-  <Container height="100vh">
+  <Container minHeight="100vh">
     <Main>
       <Avatar src="/images/img_avatar.png" userId="pharrell" />
 
@@ -67,9 +59,9 @@ const Index = () => (
       <Socials items={socialLinks} />
     </Main>
 
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Cookie Preferences</Text>
+    {/* <DarkModeSwitch /> */}
+    <Footer justifyContent="flex-start" alignItems="flex-start" width="100%">
+      <Text fontSize="xs">Cookie Preferences</Text>
     </Footer>
   </Container>
 );
