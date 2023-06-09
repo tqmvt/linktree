@@ -16,7 +16,8 @@ import { Avatar } from "../components/atom/Avatar";
 const Index = () => (
   <Container height="100vh">
     <Main>
-      <Avatar src="/images/img_avatar.png" />
+      <Avatar src="/images/img_avatar.png" userId="pharrell" />
+
       <List spacing={3} my={0} color="text">
         <ListItem>
           <ListIcon as={CheckCircleIcon} color="green.500" />

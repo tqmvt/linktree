@@ -1,4 +1,4 @@
-import { Stack, StackProps } from '@chakra-ui/react'
+import { Stack, StackProps } from "@chakra-ui/react";
 
 export const Main = (props: StackProps) => (
   <Stack
@@ -7,6 +7,7 @@ export const Main = (props: StackProps) => (
     maxWidth="48rem"
     pt="8rem"
     px="1rem"
+    textAlign="center"
     {...props}
   />
-)
+);
