@@ -90,3 +90,18 @@ export const USER_PROFILE: UserProfileT = {
   image: "/images/img_avatar.png",
   username: "tibo",
 };
+
+export const USERS: UserProfileT[] = [
+  {
+    image: "/images/img_avatar.png",
+    username: "tibo",
+  },
+  {
+    image: "/images/img_avatar.png",
+    username: "taylor",
+  },
+  {
+    image: "/images/img_avatar.png",
+    username: "chakra",
+  },
+];
