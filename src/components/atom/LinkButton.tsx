@@ -13,26 +13,35 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
     <ChakraLink isExternal href={data.link} _hover={{ textDecoration: "none" }}>
       <Box
         rounded="full"
-        px="10"
-        py="3"
+        px="66px"
+        py="16px"
         border="2px"
         position="relative"
+        boxShadow="rgb(0, 0, 0) 8px 8px 0px 0px"
         onMouseEnter={() => setMouse(true)}
         onMouseLeave={() => setMouse(false)}
+        _hover={{
+          boxShadow: "rgb(0, 0, 0) 4px 4px 0px 0px",
+          transform: "translate(4px, 4px)",
+        }}
       >
         {!!data.image && (
-          <Box position="absolute" top="5px" left="1">
-            <CImage width={38} height={38} src={data.image} />
+          <Box position="absolute" top="4px" left="1">
+            <CImage width={48} height={48} src={data.image} />
           </Box>
         )}
 
         <Box fontWeight="semibold">{data.title}</Box>
 
-        {mouse && (
-          <Box position="absolute" top="2" right="2">
-            <ExternalLinkIcon />
-          </Box>
-        )}
+        <Box
+          position="absolute"
+          top="16px"
+          right="4"
+          opacity={mouse ? 1 : 0}
+          transition="all 120ms ease-out 0s"
+        >
+          <ExternalLinkIcon />
+        </Box>
       </Box>
     </ChakraLink>
   );
