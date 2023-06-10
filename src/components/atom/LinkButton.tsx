@@ -25,6 +25,7 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
           boxShadow: "rgb(0, 0, 0) 4px 4px 0px 0px",
           transform: "translate(4px, 4px)",
         }}
+        background="white"
       >
         {!!data.image && (
           <Box position="absolute" top="4px" left="1">
