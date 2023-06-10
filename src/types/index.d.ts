@@ -8,3 +8,8 @@ type SocialLinkT = {
   url: string;
   title: string;
 };
+
+type UserProfileT = {
+  image: string;
+  username: string;
+};

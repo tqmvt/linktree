@@ -6,6 +6,7 @@ type CImageProps = {
   width: number;
   height: number;
 };
+
 export const CImage = ({ src, width, height }: CImageProps) => {
   return (
     <Box

@@ -47,7 +47,7 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
           right="4"
           translateY="-50%"
           transform="auto"
-          opacity={mouse ? 1 : 1}
+          opacity={mouse ? 1 : 0}
           transition="all 120ms ease-out 0s"
         >
           <ExternalLinkIcon />

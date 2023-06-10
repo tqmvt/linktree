@@ -85,3 +85,8 @@ export const SOCIAL_ICONS = {
   pinterest: "/images/svgs/pinterest.svg",
   twitter: "/images/svgs/twitter.svg",
 };
+
+export const USER_PROFILE: UserProfileT = {
+  image: "/images/img_avatar.png",
+  username: "tibo",
+};
