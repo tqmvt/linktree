@@ -28,7 +28,13 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
         background="white"
       >
         {!!data.image && (
-          <Box position="absolute" top="4px" left="1">
+          <Box
+            position="absolute"
+            top="50%"
+            translateY="-50%"
+            transform="auto"
+            left="1"
+          >
             <CImage width={48} height={48} src={data.image} />
           </Box>
         )}
@@ -37,9 +43,11 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
 
         <Box
           position="absolute"
-          top="16px"
+          top="50%"
           right="4"
-          opacity={mouse ? 1 : 0}
+          translateY="-50%"
+          transform="auto"
+          opacity={mouse ? 1 : 1}
           transition="all 120ms ease-out 0s"
         >
           <ExternalLinkIcon />
