@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         user: user.username,
       },
     })),
-    fallback: true,
+    fallback: false,
   };
 };
 
