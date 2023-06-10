@@ -13,7 +13,7 @@ export const LinkButton = ({ data }: LinkButtonProps) => {
   return (
     <ChakraLink isExternal href={data.link} _hover={{ textDecoration: "none" }}>
       <Box
-        rounded="full"
+        rounded="30px"
         px="66px"
         py="16px"
         border="2px"

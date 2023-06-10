@@ -20,7 +20,7 @@ export const MagicAvatar = ({ src, userId, isVisible }: MagicAvatarProps) => {
       right="0px"
       rounded="full"
       zIndex="10"
-      width="66%"
+      width={{ base: "96%", lg: "66%" }}
       borderWidth="1px"
       borderColor="rgb(235, 238, 241)"
       backgroundColor="rgba(255, 255, 255, 0.5)"
