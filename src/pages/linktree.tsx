@@ -1,4 +1,5 @@
 import { Text } from "@chakra-ui/react";
+import { GetStaticProps } from "next/types";
 
 import { Container } from "../components/Container";
 import { Main } from "../components/Main";
@@ -6,49 +7,18 @@ import { Footer } from "../components/Footer";
 import { Avatar } from "../components/atom/Avatar";
 import { LinkButton } from "../components/atom/LinkButton";
 import { Socials } from "../components/atom/Socials";
+import { LINKS, SOCIAL_LINKS } from "../constants";
 
-const links: LinkT[] = [
-  {
-    image: "/images/thumbnail.jpg",
-    title: "Twitter",
-    link: "",
-  },
-  {
-    image: "",
-    title: "Github",
-    link: "",
-  },
-  {
-    image: "/images/thumbnail2.jpg",
-    title: "Linkedin",
-    link: "",
-  },
-  {
-    image: "",
-    title: "Stackoverflow",
-    link: "",
-  },
-];
+type LinkTreeProps = {
+  links: LinkT[];
+  socialLinks: SocialLinkT[];
+};
 
-const socialLinks: SocialLinkT[] = [
-  {
-    title: "twitter",
-    url: "https://twitter.com/_scentforest",
-  },
-  {
-    title: "github",
-    url: "https://github.com/gofixgo",
-  },
-  {
-    title: "instagram",
-    url: "https://twitter.com/_scentforest",
-  },
-  {
-    title: "facebook",
-    url: "https://twitter.com/_scentforest",
-  },
-];
-const Index = () => (
+export const getStaticProps: GetStaticProps<LinkTreeProps> = async () => {
+  return { props: { links: LINKS, socialLinks: SOCIAL_LINKS } };
+};
+
+const LinkTree = ({ links, socialLinks }) => (
   <Container minHeight="100vh">
     <Main>
       <Avatar src="/images/img_avatar.png" userId="pharrell" />
@@ -66,4 +36,4 @@ const Index = () => (
   </Container>
 );
 
-export default Index;
+export default LinkTree;

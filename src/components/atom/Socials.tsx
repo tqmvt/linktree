@@ -1,15 +1,6 @@
 import { Flex, chakra, Link as ChakraLink } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
-
-const socials = {
-  facebook: "/images/svgs/facebook.svg",
-  github: "/images/svgs/github.svg",
-  instagram: "/images/svgs/instagram.svg",
-  linkedin: "/images/svgs/linkedin.svg",
-  pinterest: "/images/svgs/pinterest.svg",
-  twitter: "/images/svgs/twitter.svg",
-};
+import { SOCIAL_ICONS } from "../../constants";
 
 type SocialsProps = {
   items: SocialLinkT[];
@@ -40,7 +31,7 @@ export const Socials = ({ items }: SocialsProps) => {
             >
               <CoverImg
                 as={Image}
-                src={socials[item.title]}
+                src={SOCIAL_ICONS[item.title]}
                 width={8}
                 height={8}
                 alt={item.title}
