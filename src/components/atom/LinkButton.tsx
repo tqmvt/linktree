@@ -6,6 +6,7 @@ import { CImage } from "./CImage";
 type LinkButtonProps = {
   data: LinkT;
 };
+
 export const LinkButton = ({ data }: LinkButtonProps) => {
   const [mouse, setMouse] = useState<boolean>(false);
 

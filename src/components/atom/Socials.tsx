@@ -12,7 +12,7 @@ const CoverImg = chakra(Image, {
 
 export const Socials = ({ items }: SocialsProps) => {
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <Flex alignItems="center" justifyContent="center" mb="10">
       {items.map((item) => {
         return (
           <ChakraLink
@@ -24,7 +24,7 @@ export const Socials = ({ items }: SocialsProps) => {
             <Flex
               key={item.title}
               mx="2"
-              w="80px"
+              w="40px"
               h="50px"
               alignItems="center"
               justifyContent="center"
