@@ -8,10 +8,6 @@ Thanks to [Tibo](https://twitter.com/tibo_maker) :tada:
 - Chakra UI
 - TypeScript
 
-### Todo:
-
-- to use dynamic pages, should have multiple users for link tree
-
 # Linktree app with [chakra-ui](https://github.com/chakra-ui/chakra-ui) and TypeScript
 
 This example features how to use [chakra-ui](https://github.com/chakra-ui/chakra-ui) as the component library within a Next.js app with TypeScript.
