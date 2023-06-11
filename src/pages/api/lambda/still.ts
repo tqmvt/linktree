@@ -4,7 +4,7 @@ import {
   RenderStillOnLambdaOutput,
 } from "@remotion/lambda";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { config } from "../../../config";
+import { config } from "../../../../config";
 
 export default async function still(
   req: NextApiRequest,
