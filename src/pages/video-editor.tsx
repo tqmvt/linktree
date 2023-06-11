@@ -17,7 +17,7 @@ const VideoEditor = () => {
   useEffect(() => {
     setProps(JSON.parse(text));
   }, [text]);
-  const { renderMedia, progress, status, price, url, renderId } = useLambda(
+  const { progress, status, price, url, renderId } = useLambda(
     "VideoComp",
     props
   );
@@ -56,13 +56,13 @@ const VideoEditor = () => {
                 onChange={(e) => setText(e.currentTarget.value)}
               />
               <div className=" flex flex-col items-center">
-                <button
+                {/* <button
                   onClick={renderMedia}
                   disabled={true}
                   className="rounded-lg bg-blue-400 text-white uppercase px-4 py-2 m-2 disabled:bg-gray-400"
                 >
                   Render
-                </button>
+                </button> */}
                 {status && (
                   <div className="w-full items-center flex flex-col">
                     <p
