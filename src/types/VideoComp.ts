@@ -5,7 +5,8 @@ export interface VideoCompProps {
 }
 
 export const defaultVideoCompProps: VideoCompProps = {
-  title: "Welcome to Remotion with Tailwind",
-  subtitle: "Edit src/Composition.tsx and save to reload.",
-  backgroundColor: "white",
+  title: "Text on video",
+  subtitle:
+    "To view real-time changes on the video, please update the content accordingly.",
+  backgroundColor: "transparent",
 };

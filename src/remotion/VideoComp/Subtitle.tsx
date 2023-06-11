@@ -1,4 +1,4 @@
-import React from "react";
+import { Text } from "@chakra-ui/react";
 import { interpolate, useCurrentFrame } from "remotion";
 
 export const Subtitle = ({ subtitle }: { subtitle: string }) => {
@@ -9,8 +9,8 @@ export const Subtitle = ({ subtitle }: { subtitle: string }) => {
   });
 
   return (
-    <div className="text-gray-600 text-3xl" style={{ opacity }}>
+    <Text fontSize="4xl" className="text-gray-600 text-3xl" style={{ opacity }}>
       {subtitle}
-    </div>
+    </Text>
   );
 };

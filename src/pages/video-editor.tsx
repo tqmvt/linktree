@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Textarea } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Player } from "@remotion/player";
 
@@ -32,8 +32,8 @@ const VideoEditor = () => {
         zIndex="-1"
       />
       <Main>
-        <Box>
-          <div className="max-w-screen-md m-auto mb-20">
+        <Box mb="10">
+          <Box className="max-w-screen-md m-auto mb-20">
             <Player
               component={VideoComposition}
               inputProps={props}
@@ -47,17 +47,18 @@ const VideoEditor = () => {
               loop
             />
             <div className="grid grid-cols-2 h-60">
-              <textarea
+              <Textarea
                 name="props"
-                id=""
-                className=" w-full bg-gray-300"
+                id="props"
+                mt={3}
+                rows={8}
                 value={text}
                 onChange={(e) => setText(e.currentTarget.value)}
               />
               <div className=" flex flex-col items-center">
                 <button
                   onClick={renderMedia}
-                  disabled={status === "rendering"}
+                  disabled={true}
                   className="rounded-lg bg-blue-400 text-white uppercase px-4 py-2 m-2 disabled:bg-gray-400"
                 >
                   Render
@@ -106,7 +107,7 @@ const VideoEditor = () => {
                 )}
               </div>
             </div>
-          </div>
+          </Box>
         </Box>
       </Main>
 
