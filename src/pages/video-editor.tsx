@@ -1,24 +1,24 @@
 import { Box, Text } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { Player } from "@remotion/player";
 
 import { Container } from "../components/Container";
 import { Main } from "../components/Main";
 import { Footer } from "../components/Footer";
 
-import { Player } from "@remotion/player";
-import { useEffect, useState } from "react";
+import { VideoComposition } from "../remotion/VideoComp/Composition";
+import { defaultVideoCompProps } from "../types/VideoComp";
 import { useLambda } from "../hooks/useLambda";
-import { MyComposition } from "../remotion/MyComp/Composition";
-import { defaultMyCompProps } from "../types/MyComp";
 
 const VideoEditor = () => {
-  const [props, setProps] = useState(defaultMyCompProps);
+  const [props, setProps] = useState(defaultVideoCompProps);
   const [text, setText] = useState(JSON.stringify(props, null, 2));
 
   useEffect(() => {
     setProps(JSON.parse(text));
   }, [text]);
   const { renderMedia, progress, status, price, url, renderId } = useLambda(
-    "MyComp",
+    "VideoComp",
     props
   );
 
@@ -35,7 +35,7 @@ const VideoEditor = () => {
         <Box>
           <div className="max-w-screen-md m-auto mb-20">
             <Player
-              component={MyComposition}
+              component={VideoComposition}
               inputProps={props}
               durationInFrames={120}
               fps={30}

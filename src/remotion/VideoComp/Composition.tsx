@@ -1,14 +1,14 @@
 import { AbsoluteFill } from "remotion";
-import { MyCompProps } from "../../types/MyComp";
+import { VideoCompProps } from "../../types/VideoComp";
 import { Logo } from "./Logo";
 import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
 
-export const MyComposition = ({
+export const VideoComposition = ({
   title,
   subtitle,
   backgroundColor,
-}: MyCompProps) => {
+}: VideoCompProps) => {
   return (
     <AbsoluteFill
       className="bg-gray-100 items-center justify-center"
