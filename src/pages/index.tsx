@@ -36,7 +36,6 @@ const Index = () => (
       </List>
     </Main>
 
-    {/* <DarkModeSwitch /> */}
     <Footer>
       <Text>
         TODO: to use dynamic pages, should have multiple users for link tree

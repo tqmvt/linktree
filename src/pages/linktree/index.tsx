@@ -1,14 +1,12 @@
-// todo: remove. for now keep it to not break the routes for Tibo to check
+// todo: remove. for now keep it to not break the demo routes for Tibo to check
 import { Box, Text } from "@chakra-ui/react";
 import { GetStaticProps } from "next/types";
 
 import { Container } from "../../components/Container";
 import { Main } from "../../components/Main";
 import { Footer } from "../../components/Footer";
-import { LinkButton } from "../../components/atom/LinkButton";
-import { Socials } from "../../components/atom/Socials";
+import { LinkButton, Socials, Avatars } from "../../components/atom";
 import { LINKS, SOCIAL_LINKS, USER_PROFILE } from "../../constants";
-import { Avatars } from "../../components/atom/Avatars";
 
 type LinkTreeProps = {
   links: LinkT[];
@@ -43,7 +41,6 @@ const LinkTree = ({ links, socialLinks, userProfile }: LinkTreeProps) => (
       <Socials items={socialLinks} />
     </Main>
 
-    {/* <DarkModeSwitch /> */}
     <Footer justifyContent="flex-start" alignItems="flex-start" width="100%">
       <Text fontSize="2xs" fontWeight="thin">
         Cookie Preferences
