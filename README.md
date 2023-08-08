@@ -1,7 +1,5 @@
 ## :palm_tree: Linktree v2
 
-Thanks to [Tibo](https://twitter.com/tibo_maker) :tada:
-
 ### Tools used:
 
 - Next.js
