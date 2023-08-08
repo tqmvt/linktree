@@ -5,7 +5,12 @@
     "build": "next build",
     "start": "next start",
     "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "format:write": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format:write": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "preview": "remotion preview remotion/index.tsx",
+    "render": "remotion render remotion/index.tsx ",
+    "lambda:site": "npx remotion lambda sites create remotion/index.tsx --site-name=remotion-next-example",
+    "lambda:function": "npx remotion lambda functions deploy",
+    "lambda:render": "npx remotion lambda render"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.2",
@@ -13,10 +18,16 @@
     "@chakra-ui/theme-tools": "^2.0.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.9.0",
+    "@remotion/cli": "^3.3.100",
+    "@remotion/eslint-config": "^3.3.100",
+    "@remotion/lambda": "^3.3.100",
+    "@remotion/player": "^3.3.100",
+    "axios": "^1.4.0",
     "framer-motion": "^6.3.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remotion": "^3.3.100"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
