@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Code } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 
 export const Hero = ({ title }: { title: string }) => (
   <Flex
@@ -11,13 +11,9 @@ export const Hero = ({ title }: { title: string }) => (
     px={5}
   >
     <Heading fontSize="3xl">{title}</Heading>
-    <Text color="text">
-      <Code>Next.js</Code> + <Code>chakra-ui</Code> + <Code>TypeScript</Code> +{" "}
-      <Code>functional components</Code>
-    </Text>
   </Flex>
 );
 
 Hero.defaultProps = {
-  title: "Sweet linktree & video editor for Tibo",
+  title: "Sweeeet linktree & video editor",
 };
