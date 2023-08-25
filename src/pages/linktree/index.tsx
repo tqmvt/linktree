@@ -1,4 +1,3 @@
-// todo: remove. for now keep it to not break the demo routes for Tibo to check
 import { Box, Text } from "@chakra-ui/react";
 import { GetStaticProps } from "next/types";
 
